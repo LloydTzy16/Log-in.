@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Moved height property into body selector */
+}
+
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(0deg, #2b5eab, black);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cloud, .cloud2, .cloud3, .cloud4 {
+  border: solid 1px #ffffff;
+  background: #ffffff;
+  filter: drop-shadow(5px 5px 20px #ffffff) invert(1%);
+}
+
+.cloud {
+  position: relative;
+  width: 320px;
+  height: 100px;
+  border-radius: 80px;
+  margin-top: 150px;
+  z-index: 200; /* Moved z-index property up */
+}
+
+.cloud2 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  bottom: 0;
+  left: 30px;
+}
+
+.cloud3 {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  bottom: 0;
+  right: 30px;
+}
+
+.letters {
+  position: absolute;
+  z-index: -300;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  animation: fall 1s linear infinite;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(400px);
+  }
+}
+
+.cloud4 {
+  width: 320px;
+  height: 100px;
+  border-radius: 80px;
+}
+
+.stars {
+  position: absolute;
+  transition: 1s; /* Moved transition property into .stars selector */
+}
+
+form {
+  position: absolute;
+  width: 300px;
+  height: 350px;
+  border: solid 1px gray;
+  background: linear-gradient(0deg, #8098ff, #ffffff);
+  opacity: 0.8; /* Changed percentage to decimal */
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  z-index: 200;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 20px;
+}
+
+input {
+  height: 30px;
+  opacity: 1; /* Changed 'none' to '1' */
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px; /* Added missing value */
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  overflow: hidden; /* Corrected typo: hidde to hidden */
+  margin: auto; /* Added missing property */
+  border-radius: 50%;
+  border: solid 1px;
+  background-image: url(photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  border: solid 1px;
+  background: linear-gradient(0deg, #8098ff, #ffffff);
+}
